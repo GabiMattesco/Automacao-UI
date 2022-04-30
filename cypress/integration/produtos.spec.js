@@ -15,12 +15,12 @@ describe('Funcionalidade Página de produtos', () => {
             .click()
     });
 
-    it('Deve adicionar um produto ao carrinho', () => {
+    it.only('Deve adicionar um produto ao carrinho', () => {
         var quantidade = 2
 
         cy.get('[class="product-block grid"]')
             .contains('Aether Gym Pant').click()
-        cy.get('.button-variable-item-36').click()
+        cy.get('.button-variable-item-32').click()
         cy.get('.button-variable-item-Blue').click()
         cy.get('.input-text').clear().type(quantidade)
         cy.get('.single_add_to_cart_button').click()
