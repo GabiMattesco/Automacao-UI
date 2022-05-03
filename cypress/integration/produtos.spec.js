@@ -11,7 +11,7 @@ describe('Funcionalidade Página de produtos', () => {
             //.first()
             //.last()
             //.eq(3)
-            .contains('Aether Gym Pant')
+            .contains('Arcadio Gym Short')
             .click()
     });
 
@@ -19,14 +19,14 @@ describe('Funcionalidade Página de produtos', () => {
         var quantidade = 2
 
         cy.get('[class="product-block grid"]')
-            .contains('Aether Gym Pant').click()
+            .contains('Arcadio Gym Short').click()
         cy.get('.button-variable-item-32').click()
         cy.get('.button-variable-item-Blue').click()
         cy.get('.input-text').clear().type(quantidade)
         cy.get('.single_add_to_cart_button').click()
 
         cy.get('.dropdown-toggle > .mini-cart-items').should('contain' , quantidade)
-        cy.get('.sub-title > .woocommerce-Price-amount > bdi').should('contain' , 'R$148,00')
+        cy.get('.sub-title > .woocommerce-Price-amount > bdi').should('contain' , 'R$40,00')
         
           
     
